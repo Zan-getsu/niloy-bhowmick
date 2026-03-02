@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence  } from "framer-motion";
 import { Play } from "lucide-react";
 import GlassmorphismCard from "@/components/glassmorphism-card";
 import { Badge } from "@/components/ui/badge";
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     <div className="relative overflow-hidden rounded-2xl aspect-video mb-5 shadow-lg bg-black isolate">
                         <AnimatePresence mode="wait">
                             {isPlaying ? (
-                                <motion.div
+                                <m.div
                                     key="video-player"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
@@ -89,14 +89,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                                             <path d="m6 6 18 18" />
                                         </svg>
                                     </button>
-                                </motion.div>
+                                </m.div>
                             ) : (
                                 <div
                                     key="thumbnail"
                                     className="relative w-full h-full cursor-pointer group/thumb"
                                     onClick={handlePlayClick}
                                 >
-                                    <motion.div
+                                    <m.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
@@ -109,7 +109,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
-                                    </motion.div>
+                                    </m.div>
 
                                     {/* Play Button Overlay */}
                                     <div className="absolute inset-0 bg-black/20 group-hover/thumb:bg-black/40 transition-colors duration-300 flex items-center justify-center backdrop-blur-[0px] group-hover/thumb:backdrop-blur-[2px]">

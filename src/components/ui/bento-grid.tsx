@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export const BentoGrid = ({
     className,
@@ -36,7 +36,7 @@ export const BentoGridItem = ({
     icon?: React.ReactNode;
 }) => {
     return (
-        <motion.div
+        <m.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
@@ -59,6 +59,6 @@ export const BentoGridItem = ({
                     {description}
                 </div>
             </div>
-        </motion.div>
+        </m.div>
     );
 };

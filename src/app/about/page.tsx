@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Marquee from "@/components/ui/marquee";
@@ -26,7 +26,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center pt-32 pb-12 md:py-24 px-4">
       <div className="max-w-7xl mx-auto w-full">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
@@ -37,11 +37,11 @@ export default function AboutPage() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Visual Storyteller. Motion Graphics Artist. Problem Solver.
           </p>
-        </motion.div>
+        </m.div>
 
         <BentoGrid className="max-w-6xl mx-auto mb-20">
           {/* 1. Hero Profile - SUPER HIGHLIGHTED */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -62,7 +62,7 @@ export default function AboutPage() {
 
                   {/* Name Overlay */}
                   <div className="absolute bottom-6 left-6 right-6">
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
@@ -70,7 +70,7 @@ export default function AboutPage() {
                     >
                       NILOY<br />
                       <span className="text-blue-500">BHOWMICK</span>
-                    </motion.div>
+                    </m.div>
                     <div className="h-1 w-16 md:w-20 bg-purple-500 mt-4 rounded-full" />
                     <p className="text-gray-300 mt-4 text-xs md:text-sm font-medium tracking-wide uppercase">
                       Professional Video Editor & Motion Designer
@@ -81,10 +81,10 @@ export default function AboutPage() {
               className="h-full shadow-2xl shadow-blue-900/10"
               icon={null} // Icon inside header
             />
-          </motion.div>
+          </m.div>
 
           {/* 2. Stats - Experience - VISUAL */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -103,12 +103,12 @@ export default function AboutPage() {
               className="h-full"
               icon={<Clock className="h-4 w-4 text-emerald-500" />}
             />
-          </motion.div>
+          </m.div>
 
 
 
           {/* 4. Global Reach - Visual Map */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -135,10 +135,10 @@ export default function AboutPage() {
               className="h-full"
               icon={<MapPin className="h-4 w-4 text-indigo-500" />}
             />
-          </motion.div>
+          </m.div>
 
           {/* 5. The Philosophy - Quote */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -158,10 +158,10 @@ export default function AboutPage() {
               className="h-full"
               icon={<Award className="h-4 w-4 text-yellow-500" />}
             />
-          </motion.div>
+          </m.div>
 
           {/* 6. Socials - Visual Bar */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -180,12 +180,12 @@ export default function AboutPage() {
               className="h-full"
               icon={<Zap className="h-4 w-4 text-white" />}
             />
-          </motion.div>
+          </m.div>
 
         </BentoGrid>
 
         {/* Clients Section */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -218,7 +218,7 @@ export default function AboutPage() {
               ))}
             </Marquee>
           </div>
-        </motion.div>
+        </m.div>
 
         <CTASection
           title="Ready to Work Together?"

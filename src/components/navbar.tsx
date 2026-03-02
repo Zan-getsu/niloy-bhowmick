@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence  } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Clapperboard } from "./ui/Clapperboard";
 
@@ -28,7 +28,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.nav
+    <m.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
                     {/* Active Background Pill */}
                     {isActive && (
-                      <motion.div
+                      <m.div
                         layoutId="nav-pill"
                         className="absolute inset-0 bg-white/10 rounded-full"
                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -101,7 +101,7 @@ export default function Navbar() {
         {/* Mobile Navigation Dropdown - Unified Container */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div
+            <m.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -110,7 +110,7 @@ export default function Navbar() {
             >
               <div className="pt-4 pb-2 space-y-2 flex flex-col">
                 {navItems.map((item, i) => (
-                  <motion.div
+                  <m.div
                     key={item.name}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -126,13 +126,13 @@ export default function Navbar() {
                     >
                       {item.name}
                     </Link>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
       </div>
-    </motion.nav>
+    </m.nav>
   );
 }

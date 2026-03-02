@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import GlassmorphismCard from "@/components/glassmorphism-card";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,7 @@ const CTASection = ({
 }: CTASectionProps) => {
   return (
     <section className="relative w-full py-20 px-4 overflow-hidden">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,12 +36,12 @@ const CTASection = ({
         <div className="absolute inset-0 z-[1] opacity-20 pointer-events-none" style={{ backgroundImage: 'url("/noise.png")' }} />
 
         {/* Floating Abstract Shapes */}
-        <motion.div
+        <m.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-10 right-10 w-24 h-24 border border-white/5 rounded-full z-[1]"
         />
-        <motion.div
+        <m.div
           animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-10 left-10 w-32 h-32 border border-white/5 rounded-full z-[1]"
@@ -78,7 +78,7 @@ const CTASection = ({
             </a>
           </MagneticButton>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

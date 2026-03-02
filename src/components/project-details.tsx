@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -38,7 +38,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
         <div className="min-h-screen pt-32 pb-20 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Back Button */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
@@ -54,10 +54,10 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             Back to Projects
                         </Link>
                     </Button>
-                </motion.div>
+                </m.div>
 
                 {/* Video Player Section */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -99,10 +99,10 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             )}
                         </div>
                     </GlassmorphismCard>
-                </motion.div>
+                </m.div>
 
                 {/* Project Details Section */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
@@ -203,11 +203,11 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             </Button>
                         </div>
                     </GlassmorphismCard>
-                </motion.div>
+                </m.div>
 
                 {/* Project Gallery */}
                 {project.project_images && project.project_images.length > 0 && (
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
@@ -238,12 +238,12 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 <CarouselNext className="cursor-pointer" />
                             </Carousel>
                         </GlassmorphismCard>
-                    </motion.div>
+                    </m.div>
                 )}
 
                 {/* Client Feedback */}
                 {project.client_feedback && (
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
@@ -279,7 +279,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 </div>
                             </div>
                         </GlassmorphismCard>
-                    </motion.div>
+                    </m.div>
                 )}
             </div>
         </div>
