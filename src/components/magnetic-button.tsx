@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function MagneticButton({
     children,
@@ -31,7 +31,7 @@ export default function MagneticButton({
     const { x, y } = position;
 
     return (
-        <motion.div
+        <m.div
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -41,6 +41,6 @@ export default function MagneticButton({
             className={className}
         >
             {children}
-        </motion.div>
+        </m.div>
     );
 }

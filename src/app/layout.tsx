@@ -9,6 +9,7 @@ import JumpToTop from "@/components/jump-to-top";
 import Footer from "@/components/footer";
 import SmoothScroll from "@/components/smooth-scroll";
 import { Toaster } from "@/components/ui/sonner";
+import FramerLazyMotion from "@/components/framer-lazy-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 // const nunito = Nunito({ subsets: ["latin"] });q
@@ -144,12 +145,14 @@ export default function RootLayout({
       >
         <div className="grid-background-large min-h-screen">
           <SmoothScroll>
-            <MouseMoveEffect />
-            <Navbar />
-            <main className="">{children}</main>
-            <Footer />
-            <JumpToTop />
-            <Toaster position="top-center" />
+            <FramerLazyMotion>
+              <MouseMoveEffect />
+              <Navbar />
+              <main className="">{children}</main>
+              <Footer />
+              <JumpToTop />
+              <Toaster position="top-center" />
+            </FramerLazyMotion>
           </SmoothScroll>
         </div>
       </body>
